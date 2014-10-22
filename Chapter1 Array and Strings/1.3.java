@@ -61,7 +61,7 @@ public boolean isPermutation(String str1, String str2) {
 
         for (int i = 0; i < str2.length(); i++) {
             int c = (int)str2.charAt(i);
-            if (--letters[c] < 0) {    //Danny: why must "<" ?? 
+            if (--letters[c] < 0) {    //Danny: why must "<" ??
                 return false
             }
         }
