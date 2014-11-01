@@ -58,7 +58,15 @@ public Result isPalindomeRecur(LinkedListNode head, int length) {
         return new Result(head.next.next, head.data==head.next.data);
     }
 
-    return isPalindomeRecur(head.next, length -2);
+    Result res = isPalindomeRecur(head.next, length -2);
+    if (!res.result || res.node == null) {
+      return res；
+    } else {
+        res.result = head.data==res.node.data;
+        res.node = res.node.next;
+      return res;
+    }
+
 }
 
 
